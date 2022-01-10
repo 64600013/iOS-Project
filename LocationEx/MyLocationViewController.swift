@@ -60,6 +60,14 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager?.startUpdatingLocation();
     }
     
+    func renderCircle(_ location: CLLocation){
+        let coord = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let circleSpan = MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
+        let region = MKCoordinateRegion(center: coord, span: circleSpan)
+        mapView?.setRegion(region, animated: true)
+        mapView?.showsUserLocation = true
+    }
+    
     func locationManager(_ manager: CLLocationManager,
                          didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
@@ -71,24 +79,28 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
             let coord = location.coordinate;
             let region = MKCoordinateRegion(center: coord, span: span)
             self.mapView?.setRegion(region, animated: false);
+            
+            locationManager?.stopUpdatingLocation()
+            renderCircle(location)
         }
     }
     
-    @IBAction func addSpot(_ sender: Any) {
-        print("test")
-        
-        guard let pressing = sender as? UILongPressGestureRecognizer else
-            { return }
-        let touchLocation = pressing.location(in: mapView)
-        let coord = mapView?.convert(touchLocation, toCoordinateFrom: mapView)
-        
-        let region = CLCircularRegion(center: coord!, radius: 100, identifier: "fence")
-        
-        
-        locationManager?.startMonitoring(for: region)
-        let circle = MKCircle(center: coord!, radius: region.radius)
-        mapView?.addOverlay(circle)
-    }
+    
+//    @IBAction func addSpot(_ sender: Any) {
+//        print("test")
+//
+//        guard let pressing = sender as? UILongPressGestureRecognizer else
+//            { return }
+//        let touchLocation = pressing.location(in: mapView)
+//        let coord = mapView?.convert(touchLocation, toCoordinateFrom: mapView)
+//
+//        let region = CLCircularRegion(center: coord!, radius: 100, identifier: "fence")
+//
+//
+//        locationManager?.startMonitoring(for: region)
+//        let circle = MKCircle(center: coord!, radius: region.radius)
+//        mapView?.addOverlay(circle)
+//    }
     
     func showNoti(title: String, message: String){
         let content = UNMutableNotificationContent()
@@ -111,20 +123,48 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        let phoneAlert = UIAlertController.init(title: "You have now exited the place", message: "exiting", preferredStyle: .alert)
+        phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
+        self.present(phoneAlert, animated: true, completion: nil)
+        showNoti(title: "You are leaving the actraction", message: "See you again")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        let phoneAlert = UIAlertController.init(title: "You have now entered the place", message: "entering", preferredStyle: .alert)
+        phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
+        self.present(phoneAlert, animated: true, completion: nil)
+        showNoti(title: "You are entering the actraction", message: "Hope you have a good time")
+    }
+    
     func makePoint(){
         for item in geoFenceArray{
             let coord = CLLocationCoordinate2D(latitude: Double(item.latitude!)!, longitude: Double(item.longitude!)!)
             monitorLocation(centerPoint: coord, identifier: "FencePoint")
         }
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
+}
+
+//extension MyLocationViewController{
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
+//        if let location = locations.first{
+//
+//        }
+//    }
+//
+//}
+
+extension MyLocationViewController : MKMapViewDelegate{
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        guard let circleOverlay = overlay as? MKCircle else {
+            return MKOverlayRenderer()
+        }
+        let circleRender = MKCircleRenderer(circle: circleOverlay)
+        circleRender.strokeColor = .red
+        circleRender.fillColor = .red
+        circleRender.alpha = 0.5
+        return circleRender
+    }
     
 }
