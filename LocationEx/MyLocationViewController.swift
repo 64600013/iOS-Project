@@ -20,6 +20,7 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {(granted, error) in}
         if CLLocationManager.locationServicesEnabled() {
             self.locationManager = CLLocationManager();
             self.locationManager?.delegate = self;
@@ -123,13 +124,6 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        let phoneAlert = UIAlertController.init(title: "You have now exited the place", message: "exiting", preferredStyle: .alert)
-        phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
-        self.present(phoneAlert, animated: true, completion: nil)
-        showNoti(title: "You are leaving the actraction", message: "See you again")
-    }
-    
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         let phoneAlert = UIAlertController.init(title: "You have now entered the place", message: "entering", preferredStyle: .alert)
         phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
@@ -137,12 +131,22 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
         showNoti(title: "You are entering the actraction", message: "Hope you have a good time")
     }
     
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        let phoneAlert = UIAlertController.init(title: "You have now exited the place", message: "exiting", preferredStyle: .alert)
+        phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
+        self.present(phoneAlert, animated: true, completion: nil)
+        showNoti(title: "You are leaving the actraction", message: "See you again")
+    }
+    
+    
     func makePoint(){
         for item in geoFenceArray{
             let coord = CLLocationCoordinate2D(latitude: Double(item.latitude!)!, longitude: Double(item.longitude!)!)
             monitorLocation(centerPoint: coord, identifier: "FencePoint")
         }
     }
+    
+    
     
 }
 
