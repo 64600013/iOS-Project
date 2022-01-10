@@ -1,13 +1,8 @@
-//
-//  App_ProjectUITests.swift
-//  App_ProjectUITests
-//
-//  Created by outis on 7/1/2022.
-//
+
 
 import XCTest
 
-class App_ProjectUITests: XCTestCase {
+class LocationExUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
