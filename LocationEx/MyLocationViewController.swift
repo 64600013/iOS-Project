@@ -31,7 +31,8 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
                 self.setupAndStartLocationManager();
             }
             
-            geoFenceArray = [geoFenceData(latitude: "22.246660", longitude: "114.175720")]
+            geoFenceArray = [geoFenceData(latitude: "22.246660", longitude: "114.175720"),
+                            geoFenceData(latitude: "22.284389", longitude: "114.188950")]
         }
         let oPAnnotation = MKPointAnnotation();
         oPAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.246660, longitude: 114.175720);
@@ -86,44 +87,6 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    
-//    @IBAction func addSpot(_ sender: Any) {
-//        print("test")
-//
-//        guard let pressing = sender as? UILongPressGestureRecognizer else
-//            { return }
-//        let touchLocation = pressing.location(in: mapView)
-//        let coord = mapView?.convert(touchLocation, toCoordinateFrom: mapView)
-//
-//        let region = CLCircularRegion(center: coord!, radius: 100, identifier: "fence")
-//
-//
-//        locationManager?.startMonitoring(for: region)
-//        let circle = MKCircle(center: coord!, radius: region.radius)
-//        mapView?.addOverlay(circle)
-//    }
-    
-    func showNoti(title: String, message: String){
-        let content = UNMutableNotificationContent()
-        content.title = title
-        content.body = message
-        content.badge = 1
-        content.sound = .default
-        let request = UNNotificationRequest(identifier: "noti", content: content, trigger: nil)
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-    }
-    
-    func monitorLocation(centerPoint: CLLocationCoordinate2D, identifier: String){
-        if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self){
-            let region = CLCircularRegion(center: centerPoint, radius: 100, identifier: identifier)
-            region.notifyOnExit = false
-            region.notifyOnEntry = true
-            let fenceCircle = MKCircle(center: centerPoint, radius: 100)
-            mapView?.addOverlay(fenceCircle)
-            locationManager?.startMonitoring(for: region)
-        }
-    }
-    
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         let phoneAlert = UIAlertController.init(title: "You have now entered the place", message: "entering", preferredStyle: .alert)
         phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
@@ -138,6 +101,26 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
         showNoti(title: "You are leaving the actraction", message: "See you again")
     }
     
+    func monitorLocation(centerPoint: CLLocationCoordinate2D, identifier: String){
+        if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self){
+            let region = CLCircularRegion(center: centerPoint, radius: 150, identifier: identifier)
+            region.notifyOnExit = false
+            region.notifyOnEntry = true
+            let fenceCircle = MKCircle(center: centerPoint, radius: 150)
+            mapView?.addOverlay(fenceCircle)
+            locationManager?.startMonitoring(for: region)
+        }
+    }
+    
+    func showNoti(title: String, message: String){
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = message
+        content.badge = 1
+        content.sound = .default
+        let request = UNNotificationRequest(identifier: "noti", content: content, trigger: nil)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
     
     func makePoint(){
         for item in geoFenceArray{
@@ -150,14 +133,6 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
     
 }
 
-//extension MyLocationViewController{
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
-//        if let location = locations.first{
-//
-//        }
-//    }
-//
-//}
 
 extension MyLocationViewController : MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
