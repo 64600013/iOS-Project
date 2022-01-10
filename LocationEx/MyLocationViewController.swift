@@ -4,8 +4,8 @@ import MapKit
 import CoreLocation
 
 struct geoFenceData {
-    var latitude : String?
-    var longitude : String?
+    var latitude : Double?
+    var longitude : Double?
 }
 
 class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
@@ -30,10 +30,12 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
             else {
                 self.setupAndStartLocationManager();
             }
-            
-            geoFenceArray = [geoFenceData(latitude: "22.246660", longitude: "114.175720"),
-                            geoFenceData(latitude: "22.284389", longitude: "114.188950")]
+            //This is the attractions circles
+            geoFenceArray = [geoFenceData(latitude: 22.246660, longitude: 114.175720),
+                            geoFenceData(latitude: 22.284389, longitude: 114.188950)]
         }
+        
+        //This is all the attractions pins
         let oPAnnotation = MKPointAnnotation();
         oPAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.246660, longitude: 114.175720);
         oPAnnotation.title = "Ocean Park";
@@ -62,6 +64,7 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
         self.locationManager?.startUpdatingLocation();
     }
     
+    //This updates the circles coords
     func renderCircle(_ location: CLLocation){
         let coord = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let circleSpan = MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
@@ -70,6 +73,7 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
         mapView?.showsUserLocation = true
     }
     
+    //This updates the coords
     func locationManager(_ manager: CLLocationManager,
                          didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
@@ -87,6 +91,7 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    //This show the message when user enter
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         let phoneAlert = UIAlertController.init(title: "You have now entered the place", message: "entering", preferredStyle: .alert)
         phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
@@ -94,6 +99,7 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
         showNoti(title: "You are entering the actraction", message: "Hope you have a good time")
     }
     
+    //This show the message when user leave
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         let phoneAlert = UIAlertController.init(title: "You have now exited the place", message: "exiting", preferredStyle: .alert)
         phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
@@ -101,17 +107,23 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
         showNoti(title: "You are leaving the actraction", message: "See you again")
     }
     
+    //This monitors the location of each circles in the map
+    //And actions will be triggered according to the gps
     func monitorLocation(centerPoint: CLLocationCoordinate2D, identifier: String){
         if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self){
+            //This makes the circle's monitioring range
             let region = CLCircularRegion(center: centerPoint, radius: 150, identifier: identifier)
-            region.notifyOnExit = false
+            //This make the app notifiy user if action is made
+            region.notifyOnExit = true
             region.notifyOnEntry = true
+            
             let fenceCircle = MKCircle(center: centerPoint, radius: 150)
             mapView?.addOverlay(fenceCircle)
             locationManager?.startMonitoring(for: region)
         }
     }
     
+    //This set the notification settings
     func showNoti(title: String, message: String){
         let content = UNMutableNotificationContent()
         content.title = title
@@ -122,9 +134,11 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
+    //This loops all the geo circle points
     func makePoint(){
         for item in geoFenceArray{
-            let coord = CLLocationCoordinate2D(latitude: Double(item.latitude!)!, longitude: Double(item.longitude!)!)
+            //This reads the coordinates of the circles
+            let coord = CLLocationCoordinate2D(latitude: item.latitude!, longitude: item.longitude!)
             monitorLocation(centerPoint: coord, identifier: "FencePoint")
         }
     }
@@ -133,7 +147,7 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
     
 }
 
-
+//This is used to configure the circle display settings of the geo fencing
 extension MyLocationViewController : MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         guard let circleOverlay = overlay as? MKCircle else {
