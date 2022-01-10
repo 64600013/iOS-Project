@@ -1,9 +1,3 @@
-//
-//  ViewController.swift
-//  App_Project
-//
-//  Created by outis on 7/1/2022.
-//
 
 import UIKit
 
