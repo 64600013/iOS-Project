@@ -2,6 +2,9 @@ import UIKit
 import MapKit
 import CoreLocation
 
+//import Firebasestore
+
+
 class AttractionFinderViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var mapView : MKMapView?
     
@@ -10,9 +13,12 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
     @IBOutlet weak var lngField : UITextField?
     @IBOutlet weak var accuracyField : UITextField?
     var annotations = [MKPointAnnotation]();
+    
+    //let database = Firestore.firestore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {(granted, error) in}
         if CLLocationManager.locationServicesEnabled() {
             self.locationManager = CLLocationManager();

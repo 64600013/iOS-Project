@@ -3,15 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0106F6E8F2938BB99459D947 /* Pods_AttractionAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AF1469BEEF3EEA217F4CAAE /* Pods_AttractionAppTests.framework */; };
 		0DA63B8D278D752100403C61 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DA63B8C278D752100403C61 /* GoogleService-Info.plist */; };
-		0DA63B93278D793B00403C61 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0DA63B92278D793B00403C61 /* FirebaseAnalytics */; };
-		0DA63B95278D793B00403C61 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0DA63B94278D793B00403C61 /* FirebaseStorage */; };
-		0DA63B97278D793B00403C61 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0DA63B96278D793B00403C61 /* FirebaseFirestore */; };
-		0DA63B99278D793B00403C61 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 0DA63B98278D793B00403C61 /* FirebaseDatabase */; };
+		3CE49054EAC439861609ED17 /* Pods_AttractionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A3D4183F7FD47DB82E5AA39 /* Pods_AttractionApp.framework */; };
+		A71315A5DFDBAA257E839CB0 /* Pods_AttractionApp_AttractionAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F93E0F4CA779A6A3CB451E /* Pods_AttractionApp_AttractionAppUITests.framework */; };
 		AB933089274CD19F00F8C818 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB933088274CD19F00F8C818 /* AppDelegate.swift */; };
 		AB93308B274CD19F00F8C818 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB93308A274CD19F00F8C818 /* SceneDelegate.swift */; };
 		AB93308D274CD19F00F8C818 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB93308C274CD19F00F8C818 /* ViewController.swift */; };
@@ -44,6 +43,15 @@
 
 /* Begin PBXFileReference section */
 		0DA63B8C278D752100403C61 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		297F2620A054CB0A348993DB /* Pods-AttractionAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttractionAppTests.debug.xcconfig"; path = "Target Support Files/Pods-AttractionAppTests/Pods-AttractionAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		30490267836A9A679B97C4FB /* Pods-AttractionAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttractionAppTests.release.xcconfig"; path = "Target Support Files/Pods-AttractionAppTests/Pods-AttractionAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		34F93E0F4CA779A6A3CB451E /* Pods_AttractionApp_AttractionAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AttractionApp_AttractionAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AF1469BEEF3EEA217F4CAAE /* Pods_AttractionAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AttractionAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6254706C524931B101FE297F /* Pods-AttractionApp-AttractionAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttractionApp-AttractionAppUITests.release.xcconfig"; path = "Target Support Files/Pods-AttractionApp-AttractionAppUITests/Pods-AttractionApp-AttractionAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6DD693788C811BD799B72F64 /* Pods-AttractionApp-AttractionAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttractionApp-AttractionAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-AttractionApp-AttractionAppUITests/Pods-AttractionApp-AttractionAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		783C8419A46C85F204170E2D /* Pods-AttractionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttractionApp.release.xcconfig"; path = "Target Support Files/Pods-AttractionApp/Pods-AttractionApp.release.xcconfig"; sourceTree = "<group>"; };
+		7A3D4183F7FD47DB82E5AA39 /* Pods_AttractionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AttractionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8069B52C43443615A88D21B1 /* Pods-AttractionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttractionApp.debug.xcconfig"; path = "Target Support Files/Pods-AttractionApp/Pods-AttractionApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AB933085274CD19F00F8C818 /* AttractionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttractionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB933088274CD19F00F8C818 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB93308A274CD19F00F8C818 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,10 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DA63B93278D793B00403C61 /* FirebaseAnalytics in Frameworks */,
-				0DA63B95278D793B00403C61 /* FirebaseStorage in Frameworks */,
-				0DA63B99278D793B00403C61 /* FirebaseDatabase in Frameworks */,
-				0DA63B97278D793B00403C61 /* FirebaseFirestore in Frameworks */,
+				3CE49054EAC439861609ED17 /* Pods_AttractionApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0106F6E8F2938BB99459D947 /* Pods_AttractionAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A71315A5DFDBAA257E839CB0 /* Pods_AttractionApp_AttractionAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +106,8 @@
 				AB93309E274CD1A000F8C818 /* AttractionAppTests */,
 				AB9330A9274CD1A000F8C818 /* AttractionAppUITests */,
 				AB933086274CD19F00F8C818 /* Products */,
+				AEA79602DB9109400EDAB487 /* Pods */,
+				B989B2633D2CC3179C716A2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +157,29 @@
 			path = AttractionAppUITests;
 			sourceTree = "<group>";
 		};
+		AEA79602DB9109400EDAB487 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8069B52C43443615A88D21B1 /* Pods-AttractionApp.debug.xcconfig */,
+				783C8419A46C85F204170E2D /* Pods-AttractionApp.release.xcconfig */,
+				6DD693788C811BD799B72F64 /* Pods-AttractionApp-AttractionAppUITests.debug.xcconfig */,
+				6254706C524931B101FE297F /* Pods-AttractionApp-AttractionAppUITests.release.xcconfig */,
+				297F2620A054CB0A348993DB /* Pods-AttractionAppTests.debug.xcconfig */,
+				30490267836A9A679B97C4FB /* Pods-AttractionAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B989B2633D2CC3179C716A2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A3D4183F7FD47DB82E5AA39 /* Pods_AttractionApp.framework */,
+				34F93E0F4CA779A6A3CB451E /* Pods_AttractionApp_AttractionAppUITests.framework */,
+				4AF1469BEEF3EEA217F4CAAE /* Pods_AttractionAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,21 +187,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB9330AF274CD1A000F8C818 /* Build configuration list for PBXNativeTarget "AttractionApp" */;
 			buildPhases = (
+				AE599E77077A8E337143F033 /* [CP] Check Pods Manifest.lock */,
 				AB933081274CD19F00F8C818 /* Sources */,
 				AB933082274CD19F00F8C818 /* Frameworks */,
 				AB933083274CD19F00F8C818 /* Resources */,
+				3903E2FE1993DB87987771F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = AttractionApp;
-			packageProductDependencies = (
-				0DA63B92278D793B00403C61 /* FirebaseAnalytics */,
-				0DA63B94278D793B00403C61 /* FirebaseStorage */,
-				0DA63B96278D793B00403C61 /* FirebaseFirestore */,
-				0DA63B98278D793B00403C61 /* FirebaseDatabase */,
-			);
 			productName = LocationEx;
 			productReference = AB933085274CD19F00F8C818 /* AttractionApp.app */;
 			productType = "com.apple.product-type.application";
@@ -178,6 +206,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB9330B2274CD1A000F8C818 /* Build configuration list for PBXNativeTarget "AttractionAppTests" */;
 			buildPhases = (
+				32DF605E4A156DCF99B7E683 /* [CP] Check Pods Manifest.lock */,
 				AB933097274CD1A000F8C818 /* Sources */,
 				AB933098274CD1A000F8C818 /* Frameworks */,
 				AB933099274CD1A000F8C818 /* Resources */,
@@ -196,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB9330B5274CD1A000F8C818 /* Build configuration list for PBXNativeTarget "AttractionAppUITests" */;
 			buildPhases = (
+				3C9BE9A0FAD2FEF1165B05B2 /* [CP] Check Pods Manifest.lock */,
 				AB9330A2274CD1A000F8C818 /* Sources */,
 				AB9330A3274CD1A000F8C818 /* Frameworks */,
 				AB9330A4274CD1A000F8C818 /* Resources */,
+				A86D2CCE3694DFAB5EA820AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,9 +272,6 @@
 				Base,
 			);
 			mainGroup = AB93307C274CD19F00F8C818;
-			packageReferences = (
-				0DA63B91278D793A00403C61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			productRefGroup = AB933086274CD19F00F8C818 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -282,6 +310,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32DF605E4A156DCF99B7E683 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AttractionAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3903E2FE1993DB87987771F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AttractionApp/Pods-AttractionApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AttractionApp/Pods-AttractionApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AttractionApp/Pods-AttractionApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C9BE9A0FAD2FEF1165B05B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AttractionApp-AttractionAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A86D2CCE3694DFAB5EA820AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AttractionApp-AttractionAppUITests/Pods-AttractionApp-AttractionAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AttractionApp-AttractionAppUITests/Pods-AttractionApp-AttractionAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AttractionApp-AttractionAppUITests/Pods-AttractionApp-AttractionAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE599E77077A8E337143F033 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AttractionApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AB933081274CD19F00F8C818 /* Sources */ = {
@@ -399,6 +530,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -454,6 +586,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -466,10 +599,46 @@
 		};
 		AB9330B0274CD1A000F8C818 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8069B52C43443615A88D21B1 /* Pods-AttractionApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore\"",
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BoringSSL-GRPC\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreDiagnostics\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInstallations\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleDataTransport\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/abseil\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-Core\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleAppMeasurement/Frameworks\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FirebaseAnalytics/AdIdSupport\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAppMeasurement/AdIdSupport\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAppMeasurement/WithoutAdIdSupport\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore/FirebaseCore.framework/Headers\"",
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInstallations/FirebaseInstallations.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleDataTransport/GoogleDataTransport.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities/GoogleUtilities.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC/FBLPromises.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb/nanopb.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+					"\"${PODS_TARGET_SRCROOT}/Sources/FBLPromises/include\"",
+				);
 				INFOPLIST_FILE = AttractionApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -485,10 +654,46 @@
 		};
 		AB9330B1274CD1A000F8C818 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 783C8419A46C85F204170E2D /* Pods-AttractionApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore\"",
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BoringSSL-GRPC\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreDiagnostics\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInstallations\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleDataTransport\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/abseil\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-Core\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleAppMeasurement/Frameworks\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FirebaseAnalytics/AdIdSupport\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAppMeasurement/AdIdSupport\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/GoogleAppMeasurement/WithoutAdIdSupport\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore/FirebaseCore.framework/Headers\"",
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInstallations/FirebaseInstallations.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleDataTransport/GoogleDataTransport.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities/GoogleUtilities.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC/FBLPromises.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb/nanopb.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+					"\"${PODS_TARGET_SRCROOT}/Sources/FBLPromises/include\"",
+				);
 				INFOPLIST_FILE = AttractionApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -504,12 +709,13 @@
 		};
 		AB9330B3274CD1A000F8C818 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 297F2620A054CB0A348993DB /* Pods-AttractionAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AttractionAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -525,12 +731,13 @@
 		};
 		AB9330B4274CD1A000F8C818 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30490267836A9A679B97C4FB /* Pods-AttractionAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = AttractionAppTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -546,6 +753,7 @@
 		};
 		AB9330B6274CD1A000F8C818 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DD693788C811BD799B72F64 /* Pods-AttractionApp-AttractionAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -565,6 +773,7 @@
 		};
 		AB9330B7274CD1A000F8C818 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6254706C524931B101FE297F /* Pods-AttractionApp-AttractionAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -622,40 +831,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		0DA63B91278D793A00403C61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.10.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		0DA63B92278D793B00403C61 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0DA63B91278D793A00403C61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		0DA63B94278D793B00403C61 /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0DA63B91278D793A00403C61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-		};
-		0DA63B96278D793B00403C61 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0DA63B91278D793A00403C61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		0DA63B98278D793B00403C61 /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0DA63B91278D793A00403C61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB93307D274CD19F00F8C818 /* Project object */;
 }

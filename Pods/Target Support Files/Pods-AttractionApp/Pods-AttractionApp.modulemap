@@ -1,0 +1,6 @@
+framework module Pods_AttractionApp {
+  umbrella header "Pods-AttractionApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
