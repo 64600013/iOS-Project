@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AB933085274CD19F00F8C818 /* LocationEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB933085274CD19F00F8C818 /* AttractionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttractionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB933088274CD19F00F8C818 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB93308A274CD19F00F8C818 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AB93308C274CD19F00F8C818 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,10 +46,10 @@
 		AB933091274CD1A000F8C818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB933094274CD1A000F8C818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB933096274CD1A000F8C818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB93309B274CD1A000F8C818 /* LocationExTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationExTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB93309B274CD1A000F8C818 /* AttractionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttractionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB93309F274CD1A000F8C818 /* LocationExTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationExTests.swift; sourceTree = "<group>"; };
 		AB9330A1274CD1A000F8C818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB9330A6274CD1A000F8C818 /* LocationExUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationExUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB9330A6274CD1A000F8C818 /* AttractionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttractionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9330AA274CD1A000F8C818 /* LocationExUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationExUITests.swift; sourceTree = "<group>"; };
 		AB9330AC274CD1A000F8C818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB9330B8274CD49E00F8C818 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		AB93307C274CD19F00F8C818 = {
 			isa = PBXGroup;
 			children = (
-				AB933087274CD19F00F8C818 /* LocationEx */,
+				AB933087274CD19F00F8C818 /* AttractionApp */,
 				AB93309E274CD1A000F8C818 /* LocationExTests */,
 				AB9330A9274CD1A000F8C818 /* LocationExUITests */,
 				AB933086274CD19F00F8C818 /* Products */,
@@ -95,14 +95,14 @@
 		AB933086274CD19F00F8C818 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AB933085274CD19F00F8C818 /* LocationEx.app */,
-				AB93309B274CD1A000F8C818 /* LocationExTests.xctest */,
-				AB9330A6274CD1A000F8C818 /* LocationExUITests.xctest */,
+				AB933085274CD19F00F8C818 /* AttractionApp.app */,
+				AB93309B274CD1A000F8C818 /* AttractionAppTests.xctest */,
+				AB9330A6274CD1A000F8C818 /* AttractionAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AB933087274CD19F00F8C818 /* LocationEx */ = {
+		AB933087274CD19F00F8C818 /* AttractionApp */ = {
 			isa = PBXGroup;
 			children = (
 				AB933088274CD19F00F8C818 /* AppDelegate.swift */,
@@ -116,7 +116,7 @@
 				AB9330BA274CDAEC00F8C818 /* MySchoolViewController.swift */,
 				AB9330BC274CDD4F00F8C818 /* AttractionFinderViewController.swift */,
 			);
-			path = LocationEx;
+			path = AttractionApp;
 			sourceTree = "<group>";
 		};
 		AB93309E274CD1A000F8C818 /* LocationExTests */ = {
@@ -140,9 +140,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AB933084274CD19F00F8C818 /* LocationEx */ = {
+		AB933084274CD19F00F8C818 /* AttractionApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB9330AF274CD1A000F8C818 /* Build configuration list for PBXNativeTarget "LocationEx" */;
+			buildConfigurationList = AB9330AF274CD1A000F8C818 /* Build configuration list for PBXNativeTarget "AttractionApp" */;
 			buildPhases = (
 				AB933081274CD19F00F8C818 /* Sources */,
 				AB933082274CD19F00F8C818 /* Frameworks */,
@@ -152,14 +152,14 @@
 			);
 			dependencies = (
 			);
-			name = LocationEx;
+			name = AttractionApp;
 			productName = LocationEx;
-			productReference = AB933085274CD19F00F8C818 /* LocationEx.app */;
+			productReference = AB933085274CD19F00F8C818 /* AttractionApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AB93309A274CD1A000F8C818 /* LocationExTests */ = {
+		AB93309A274CD1A000F8C818 /* AttractionAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB9330B2274CD1A000F8C818 /* Build configuration list for PBXNativeTarget "LocationExTests" */;
+			buildConfigurationList = AB9330B2274CD1A000F8C818 /* Build configuration list for PBXNativeTarget "AttractionAppTests" */;
 			buildPhases = (
 				AB933097274CD1A000F8C818 /* Sources */,
 				AB933098274CD1A000F8C818 /* Frameworks */,
@@ -170,14 +170,14 @@
 			dependencies = (
 				AB93309D274CD1A000F8C818 /* PBXTargetDependency */,
 			);
-			name = LocationExTests;
+			name = AttractionAppTests;
 			productName = LocationExTests;
-			productReference = AB93309B274CD1A000F8C818 /* LocationExTests.xctest */;
+			productReference = AB93309B274CD1A000F8C818 /* AttractionAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AB9330A5274CD1A000F8C818 /* LocationExUITests */ = {
+		AB9330A5274CD1A000F8C818 /* AttractionAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AB9330B5274CD1A000F8C818 /* Build configuration list for PBXNativeTarget "LocationExUITests" */;
+			buildConfigurationList = AB9330B5274CD1A000F8C818 /* Build configuration list for PBXNativeTarget "AttractionAppUITests" */;
 			buildPhases = (
 				AB9330A2274CD1A000F8C818 /* Sources */,
 				AB9330A3274CD1A000F8C818 /* Frameworks */,
@@ -188,9 +188,9 @@
 			dependencies = (
 				AB9330A8274CD1A000F8C818 /* PBXTargetDependency */,
 			);
-			name = LocationExUITests;
+			name = AttractionAppUITests;
 			productName = LocationExUITests;
-			productReference = AB9330A6274CD1A000F8C818 /* LocationExUITests.xctest */;
+			productReference = AB9330A6274CD1A000F8C818 /* AttractionAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -215,7 +215,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AB933080274CD19F00F8C818 /* Build configuration list for PBXProject "LocationEx" */;
+			buildConfigurationList = AB933080274CD19F00F8C818 /* Build configuration list for PBXProject "AttractionApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -228,9 +228,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AB933084274CD19F00F8C818 /* LocationEx */,
-				AB93309A274CD1A000F8C818 /* LocationExTests */,
-				AB9330A5274CD1A000F8C818 /* LocationExUITests */,
+				AB933084274CD19F00F8C818 /* AttractionApp */,
+				AB93309A274CD1A000F8C818 /* AttractionAppTests */,
+				AB9330A5274CD1A000F8C818 /* AttractionAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -297,12 +297,12 @@
 /* Begin PBXTargetDependency section */
 		AB93309D274CD1A000F8C818 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AB933084274CD19F00F8C818 /* LocationEx */;
+			target = AB933084274CD19F00F8C818 /* AttractionApp */;
 			targetProxy = AB93309C274CD1A000F8C818 /* PBXContainerItemProxy */;
 		};
 		AB9330A8274CD1A000F8C818 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AB933084274CD19F00F8C818 /* LocationEx */;
+			target = AB933084274CD19F00F8C818 /* AttractionApp */;
 			targetProxy = AB9330A7274CD1A000F8C818 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -449,13 +449,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LocationEx/Info.plist;
+				INFOPLIST_FILE = AttractionApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.LocationEx;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.AttractionEx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -468,13 +468,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LocationEx/Info.plist;
+				INFOPLIST_FILE = AttractionApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.LocationEx;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.AttractionEx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -498,7 +498,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocationEx.app/LocationEx";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AttractionApp.app/AttractionApp";
 			};
 			name = Debug;
 		};
@@ -519,7 +519,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LocationEx.app/LocationEx";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AttractionApp.app/AttractionApp";
 			};
 			name = Release;
 		};
@@ -564,7 +564,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AB933080274CD19F00F8C818 /* Build configuration list for PBXProject "LocationEx" */ = {
+		AB933080274CD19F00F8C818 /* Build configuration list for PBXProject "AttractionApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB9330AD274CD1A000F8C818 /* Debug */,
@@ -573,7 +573,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB9330AF274CD1A000F8C818 /* Build configuration list for PBXNativeTarget "LocationEx" */ = {
+		AB9330AF274CD1A000F8C818 /* Build configuration list for PBXNativeTarget "AttractionApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB9330B0274CD1A000F8C818 /* Debug */,
@@ -582,7 +582,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB9330B2274CD1A000F8C818 /* Build configuration list for PBXNativeTarget "LocationExTests" */ = {
+		AB9330B2274CD1A000F8C818 /* Build configuration list for PBXNativeTarget "AttractionAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB9330B3274CD1A000F8C818 /* Debug */,
@@ -591,7 +591,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AB9330B5274CD1A000F8C818 /* Build configuration list for PBXNativeTarget "LocationExUITests" */ = {
+		AB9330B5274CD1A000F8C818 /* Build configuration list for PBXNativeTarget "AttractionAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB9330B6274CD1A000F8C818 /* Debug */,

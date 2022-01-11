@@ -1,4 +1,3 @@
-
 import UIKit
 import MapKit
 import CoreLocation
@@ -12,8 +11,6 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
     @IBOutlet weak var accuracyField : UITextField?
     var annotations = [MKPointAnnotation]();
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {(granted, error) in}
@@ -27,7 +24,6 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
             else {
                 self.setupAndStartLocationManager();
             }
-
         }
         
         //This is all the attractions pins
@@ -161,7 +157,7 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
-    //This loops all the geo circle points
+    //This create all the circles
     func makePoint(){
         let oCoord = CLLocationCoordinate2D(latitude: 22.246660, longitude: 114.175720);
         let dCoord = CLLocationCoordinate2D(latitude: 22.312967, longitude: 114.041282);
@@ -181,9 +177,6 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         monitorLocation(centerPoint: pCoord, identifier: "FencePoint")
 
     }
-    
-    
-    
 }
 
 //This is used to configure the circle display settings of the geo fencing
@@ -198,5 +191,4 @@ extension AttractionFinderViewController : MKMapViewDelegate{
         circleRender.alpha = 0.5
         return circleRender
     }
-    
 }
