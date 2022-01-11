@@ -1,24 +1,26 @@
 import UIKit
 import MapKit
 import CoreLocation
-
-//import Firebasestore
+import FirebaseFirestore
 
 
 class AttractionFinderViewController: UIViewController, CLLocationManagerDelegate {
+    
     @IBOutlet weak var mapView : MKMapView?
     
     var locationManager : CLLocationManager?
-    @IBOutlet weak var latField : UITextField?
-    @IBOutlet weak var lngField : UITextField?
-    @IBOutlet weak var accuracyField : UITextField?
+//    @IBOutlet weak var latField : UITextField?
+//    @IBOutlet weak var lngField : UITextField?
+//    @IBOutlet weak var accuracyField : UITextField?
     var annotations = [MKPointAnnotation]();
+    var userEnters : Int = 0
+    var userExits : Int = 0
     
-    //let database = Firestore.firestore()
+    let database = Firestore.firestore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Attraction Finder"
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {(granted, error) in}
         if CLLocationManager.locationServicesEnabled() {
             self.locationManager = CLLocationManager();
@@ -125,6 +127,8 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
         self.present(phoneAlert, animated: true, completion: nil)
         showNoti(title: "You are entering the actraction", message: "Hope you have a good time")
+        userEnters += 1
+        saveEnterData(number: userEnters)
     }
     
     //This show the message when user leave
@@ -133,6 +137,8 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
         self.present(phoneAlert, animated: true, completion: nil)
         showNoti(title: "You are leaving the actraction", message: "See you again")
+        userExits += 1
+        saveExitData(number: userExits)
     }
     
     //This monitors the location of each circles in the map
@@ -150,6 +156,20 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
             mapView?.addOverlay(fenceCircle)
             
         }
+    }
+    
+    func saveEnterData(number: Int){
+        let ref = database.document("userData/Enter")
+        let convert = String(number)
+        ref.setData(["Enter Info": "The User have entered " + convert + " times"])
+    
+    }
+    
+    func saveExitData(number: Int){
+        let ref = database.document("userData/Exit")
+        let convert = String(number)
+        ref.setData(["Exit Info": "The User have exited " + convert + " times"])
+    
     }
     
     //This set the notification settings

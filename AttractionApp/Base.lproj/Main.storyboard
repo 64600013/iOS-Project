@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="juA-bC-5rI">
-                                <rect key="frame" x="0.0" y="264" width="414" height="598"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -84,33 +84,12 @@
                                     <outletCollection property="gestureRecognizers" destination="ZQ6-H9-4Nn" appends="YES" id="FUT-YP-zCF"/>
                                 </connections>
                             </mapView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Latittude" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WvA-pN-OhQ">
-                                <rect key="frame" x="89" y="88" width="237" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="longitude" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9V3-Fx-ZPg">
-                                <rect key="frame" x="159" y="130" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Accuracy" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LBw-fu-Ycx">
-                                <rect key="frame" x="159" y="172" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FNP-sa-Fbq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="OWV-Q1-EGZ"/>
                     <connections>
-                        <outlet property="accuracyField" destination="LBw-fu-Ycx" id="ws1-6I-nhi"/>
-                        <outlet property="latField" destination="WvA-pN-OhQ" id="Xdr-Wb-aab"/>
-                        <outlet property="lngField" destination="9V3-Fx-ZPg" id="59W-WD-mQA"/>
                         <outlet property="mapView" destination="juA-bC-5rI" id="XzF-DD-c40"/>
                     </connections>
                 </viewController>
@@ -121,7 +100,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-309" y="824"/>
+            <point key="canvasLocation" x="-310.14492753623193" y="823.66071428571422"/>
         </scene>
         <!--My School View Controller-->
         <scene sceneID="61N-pJ-NjT">
