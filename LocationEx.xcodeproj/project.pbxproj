@@ -17,7 +17,7 @@
 		AB9330AB274CD1A000F8C818 /* LocationExUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9330AA274CD1A000F8C818 /* LocationExUITests.swift */; };
 		AB9330B9274CD49E00F8C818 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9330B8274CD49E00F8C818 /* CitiesViewController.swift */; };
 		AB9330BB274CDAEC00F8C818 /* MySchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9330BA274CDAEC00F8C818 /* MySchoolViewController.swift */; };
-		AB9330BD274CDD4F00F8C818 /* MyLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9330BC274CDD4F00F8C818 /* MyLocationViewController.swift */; };
+		AB9330BD274CDD4F00F8C818 /* AttractionFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9330BC274CDD4F00F8C818 /* AttractionFinderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		AB9330AC274CD1A000F8C818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB9330B8274CD49E00F8C818 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
 		AB9330BA274CDAEC00F8C818 /* MySchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySchoolViewController.swift; sourceTree = "<group>"; };
-		AB9330BC274CDD4F00F8C818 /* MyLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationViewController.swift; sourceTree = "<group>"; };
+		AB9330BC274CDD4F00F8C818 /* AttractionFinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionFinderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 				AB933096274CD1A000F8C818 /* Info.plist */,
 				AB9330B8274CD49E00F8C818 /* CitiesViewController.swift */,
 				AB9330BA274CDAEC00F8C818 /* MySchoolViewController.swift */,
-				AB9330BC274CDD4F00F8C818 /* MyLocationViewController.swift */,
+				AB9330BC274CDD4F00F8C818 /* AttractionFinderViewController.swift */,
 			);
 			path = LocationEx;
 			sourceTree = "<group>";
@@ -272,7 +272,7 @@
 				AB933089274CD19F00F8C818 /* AppDelegate.swift in Sources */,
 				AB93308B274CD19F00F8C818 /* SceneDelegate.swift in Sources */,
 				AB9330BB274CDAEC00F8C818 /* MySchoolViewController.swift in Sources */,
-				AB9330BD274CDD4F00F8C818 /* MyLocationViewController.swift in Sources */,
+				AB9330BD274CDD4F00F8C818 /* AttractionFinderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

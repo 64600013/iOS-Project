@@ -3,12 +3,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-struct geoFenceData {
-    var latitude : Double?
-    var longitude : Double?
-}
-
-class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
+class AttractionFinderViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var mapView : MKMapView?
     
     var locationManager : CLLocationManager?
@@ -16,7 +11,8 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var lngField : UITextField?
     @IBOutlet weak var accuracyField : UITextField?
     var annotations = [MKPointAnnotation]();
-    var geoFenceArray = [geoFenceData]()
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +20,14 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
         if CLLocationManager.locationServicesEnabled() {
             self.locationManager = CLLocationManager();
             self.locationManager?.delegate = self;
+            self.locationManager?.startUpdatingLocation();
             if CLLocationManager.authorizationStatus() != .authorizedAlways {
                 self.locationManager?.requestAlwaysAuthorization();
             }
             else {
                 self.setupAndStartLocationManager();
             }
-            //This is the attractions circles
-            geoFenceArray = [geoFenceData(latitude: 22.246660, longitude: 114.175720),
-                            geoFenceData(latitude: 22.284389, longitude: 114.188950)]
+
         }
         
         //This is all the attractions pins
@@ -40,6 +35,36 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
         oPAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.246660, longitude: 114.175720);
         oPAnnotation.title = "Ocean Park";
         self.annotations.append(oPAnnotation);
+        
+        let disneyAnnotation = MKPointAnnotation();
+        disneyAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.312967, longitude: 114.041282);
+        disneyAnnotation.title = "Disneyland";
+        self.annotations.append(disneyAnnotation);
+        
+        let buddhaAnnotation = MKPointAnnotation();
+        buddhaAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.253985, longitude: 113.904984);
+        buddhaAnnotation.title = "The Tian Tan Buddha";
+        self.annotations.append(buddhaAnnotation);
+        
+        let templeStreetAnnotation = MKPointAnnotation();
+        templeStreetAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.306518, longitude: 114.169980);
+        templeStreetAnnotation.title = "The Temple Street Night Market";
+        self.annotations.append(templeStreetAnnotation);
+        
+        let taiOAnnotation = MKPointAnnotation();
+        taiOAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.2542, longitude: 113.8622);
+        taiOAnnotation.title = "Tai O Fishing Village";
+        self.annotations.append(taiOAnnotation);
+        
+        let wongTaiSinAnnotation = MKPointAnnotation();
+        wongTaiSinAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.342572, longitude: 114.193649);
+        wongTaiSinAnnotation.title = "The Wong Tai Sin Temple";
+        self.annotations.append(wongTaiSinAnnotation);
+        
+        let skyObvAnnotation = MKPointAnnotation();
+        skyObvAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.303381, longitude: 114.160231);
+        skyObvAnnotation.title = "The Sky100 Observation Deck";
+        self.annotations.append(skyObvAnnotation);
         
         let peakAnnotation = MKPointAnnotation();
         peakAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.284389, longitude: 114.188950);
@@ -77,16 +102,17 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager,
                          didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
-            self.latField?.text = "\(location.coordinate.latitude)";
-            self.lngField?.text = "\(location.coordinate.longitude)";
-            self.accuracyField?.text = "\(location.horizontalAccuracy)";
             
-            let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01);
-            let coord = location.coordinate;
-            let region = MKCoordinateRegion(center: coord, span: span)
-            self.mapView?.setRegion(region, animated: false);
+//            self.latField?.text = "\(location.coordinate.latitude)";
+//            self.lngField?.text = "\(location.coordinate.longitude)";
+//            self.accuracyField?.text = "\(location.horizontalAccuracy)";
+//
+//            let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01);
+//            let coord = location.coordinate;
+//            let region = MKCoordinateRegion(center: coord, span: span)
+//            self.mapView?.setRegion(region, animated: false);
             
-            locationManager?.stopUpdatingLocation()
+            locationManager?.startUpdatingLocation()
             renderCircle(location)
         }
     }
@@ -117,9 +143,10 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
             region.notifyOnExit = true
             region.notifyOnEntry = true
             
+            locationManager?.startMonitoring(for: region)
             let fenceCircle = MKCircle(center: centerPoint, radius: 150)
             mapView?.addOverlay(fenceCircle)
-            locationManager?.startMonitoring(for: region)
+            
         }
     }
     
@@ -136,11 +163,23 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
     
     //This loops all the geo circle points
     func makePoint(){
-        for item in geoFenceArray{
-            //This reads the coordinates of the circles
-            let coord = CLLocationCoordinate2D(latitude: item.latitude!, longitude: item.longitude!)
-            monitorLocation(centerPoint: coord, identifier: "FencePoint")
-        }
+        let oCoord = CLLocationCoordinate2D(latitude: 22.246660, longitude: 114.175720);
+        let dCoord = CLLocationCoordinate2D(latitude: 22.312967, longitude: 114.041282);
+        let bCoord = CLLocationCoordinate2D(latitude: 22.253985, longitude: 113.904984);
+        let tCoord = CLLocationCoordinate2D(latitude: 22.306518, longitude: 114.169980);
+        let taiOCoord = CLLocationCoordinate2D(latitude: 22.2542, longitude: 113.8622);
+        let wCoord = CLLocationCoordinate2D(latitude: 22.342572, longitude: 114.193649);
+        let sCoord = CLLocationCoordinate2D(latitude: 22.303381, longitude: 114.160231);
+        let pCoord = CLLocationCoordinate2D(latitude: 22.284389, longitude: 114.188950);
+        monitorLocation(centerPoint: oCoord, identifier: "FencePoint")
+        monitorLocation(centerPoint: dCoord, identifier: "FencePoint")
+        monitorLocation(centerPoint: bCoord, identifier: "FencePoint")
+        monitorLocation(centerPoint: tCoord, identifier: "FencePoint")
+        monitorLocation(centerPoint: taiOCoord, identifier: "FencePoint")
+        monitorLocation(centerPoint: wCoord, identifier: "FencePoint")
+        monitorLocation(centerPoint: sCoord, identifier: "FencePoint")
+        monitorLocation(centerPoint: pCoord, identifier: "FencePoint")
+
     }
     
     
@@ -148,7 +187,7 @@ class MyLocationViewController: UIViewController, CLLocationManagerDelegate {
 }
 
 //This is used to configure the circle display settings of the geo fencing
-extension MyLocationViewController : MKMapViewDelegate{
+extension AttractionFinderViewController : MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         guard let circleOverlay = overlay as? MKCircle else {
             return MKOverlayRenderer()

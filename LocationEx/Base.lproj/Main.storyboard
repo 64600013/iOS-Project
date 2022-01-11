@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="88.392857142857139"/>
         </scene>
-        <!--My Location View Controller-->
+        <!--Attraction Finder View Controller-->
         <scene sceneID="Cr3-Er-twX">
             <objects>
-                <viewController id="dcw-T1-5sa" customClass="MyLocationViewController" customModule="LocationEx" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dcw-T1-5sa" customClass="AttractionFinderViewController" customModule="LocationEx" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eML-nb-tc6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
