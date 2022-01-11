@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DA63B8D278D752100403C61 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DA63B8C278D752100403C61 /* GoogleService-Info.plist */; };
+		0DA63B93278D793B00403C61 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0DA63B92278D793B00403C61 /* FirebaseAnalytics */; };
+		0DA63B95278D793B00403C61 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0DA63B94278D793B00403C61 /* FirebaseStorage */; };
+		0DA63B97278D793B00403C61 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0DA63B96278D793B00403C61 /* FirebaseFirestore */; };
+		0DA63B99278D793B00403C61 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 0DA63B98278D793B00403C61 /* FirebaseDatabase */; };
 		AB933089274CD19F00F8C818 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB933088274CD19F00F8C818 /* AppDelegate.swift */; };
 		AB93308B274CD19F00F8C818 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB93308A274CD19F00F8C818 /* SceneDelegate.swift */; };
 		AB93308D274CD19F00F8C818 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB93308C274CD19F00F8C818 /* ViewController.swift */; };
@@ -38,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DA63B8C278D752100403C61 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AB933085274CD19F00F8C818 /* AttractionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AttractionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB933088274CD19F00F8C818 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB93308A274CD19F00F8C818 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +68,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA63B93278D793B00403C61 /* FirebaseAnalytics in Frameworks */,
+				0DA63B95278D793B00403C61 /* FirebaseStorage in Frameworks */,
+				0DA63B99278D793B00403C61 /* FirebaseDatabase in Frameworks */,
+				0DA63B97278D793B00403C61 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +125,7 @@
 				AB9330B8274CD49E00F8C818 /* CitiesViewController.swift */,
 				AB9330BA274CDAEC00F8C818 /* MySchoolViewController.swift */,
 				AB9330BC274CDD4F00F8C818 /* AttractionFinderViewController.swift */,
+				0DA63B8C278D752100403C61 /* GoogleService-Info.plist */,
 			);
 			path = AttractionApp;
 			sourceTree = "<group>";
@@ -153,6 +164,12 @@
 			dependencies = (
 			);
 			name = AttractionApp;
+			packageProductDependencies = (
+				0DA63B92278D793B00403C61 /* FirebaseAnalytics */,
+				0DA63B94278D793B00403C61 /* FirebaseStorage */,
+				0DA63B96278D793B00403C61 /* FirebaseFirestore */,
+				0DA63B98278D793B00403C61 /* FirebaseDatabase */,
+			);
 			productName = LocationEx;
 			productReference = AB933085274CD19F00F8C818 /* AttractionApp.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +241,9 @@
 				Base,
 			);
 			mainGroup = AB93307C274CD19F00F8C818;
+			packageReferences = (
+				0DA63B91278D793A00403C61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = AB933086274CD19F00F8C818 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -241,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB933095274CD1A000F8C818 /* LaunchScreen.storyboard in Resources */,
+				0DA63B8D278D752100403C61 /* GoogleService-Info.plist in Resources */,
 				AB933092274CD1A000F8C818 /* Assets.xcassets in Resources */,
 				AB933090274CD19F00F8C818 /* Main.storyboard in Resources */,
 			);
@@ -601,6 +622,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0DA63B91278D793A00403C61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0DA63B92278D793B00403C61 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DA63B91278D793A00403C61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		0DA63B94278D793B00403C61 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DA63B91278D793A00403C61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		0DA63B96278D793B00403C61 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DA63B91278D793A00403C61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		0DA63B98278D793B00403C61 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DA63B91278D793A00403C61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AB93307D274CD19F00F8C818 /* Project object */;
 }

@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController interfaceStyle="light" id="BYZ-38-t0r" customClass="ViewController" customModule="LocationEx" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController interfaceStyle="light" id="BYZ-38-t0r" customClass="ViewController" customModule="AttractionApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,7 +70,7 @@
         <!--Attraction Finder View Controller-->
         <scene sceneID="Cr3-Er-twX">
             <objects>
-                <viewController id="dcw-T1-5sa" customClass="AttractionFinderViewController" customModule="LocationEx" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dcw-T1-5sa" customClass="AttractionFinderViewController" customModule="AttractionApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eML-nb-tc6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,7 +126,7 @@
         <!--My School View Controller-->
         <scene sceneID="61N-pJ-NjT">
             <objects>
-                <viewController id="wOB-sI-nh5" customClass="MySchoolViewController" customModule="LocationEx" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wOB-sI-nh5" customClass="MySchoolViewController" customModule="AttractionApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PO3-KB-q7H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,7 +151,7 @@
         <!--Cities-->
         <scene sceneID="Rt6-dz-kHn">
             <objects>
-                <viewController id="f1l-aj-H6B" customClass="CitiesViewController" customModule="LocationEx" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f1l-aj-H6B" customClass="CitiesViewController" customModule="AttractionApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fyB-EF-exp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
