@@ -13,8 +13,8 @@
 		AB933090274CD19F00F8C818 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB93308E274CD19F00F8C818 /* Main.storyboard */; };
 		AB933092274CD1A000F8C818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB933091274CD1A000F8C818 /* Assets.xcassets */; };
 		AB933095274CD1A000F8C818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB933093274CD1A000F8C818 /* LaunchScreen.storyboard */; };
-		AB9330A0274CD1A000F8C818 /* LocationExTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB93309F274CD1A000F8C818 /* LocationExTests.swift */; };
-		AB9330AB274CD1A000F8C818 /* LocationExUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9330AA274CD1A000F8C818 /* LocationExUITests.swift */; };
+		AB9330A0274CD1A000F8C818 /* AttractionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB93309F274CD1A000F8C818 /* AttractionAppTests.swift */; };
+		AB9330AB274CD1A000F8C818 /* AttractionAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9330AA274CD1A000F8C818 /* AttractionAppUITests.swift */; };
 		AB9330B9274CD49E00F8C818 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9330B8274CD49E00F8C818 /* CitiesViewController.swift */; };
 		AB9330BB274CDAEC00F8C818 /* MySchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9330BA274CDAEC00F8C818 /* MySchoolViewController.swift */; };
 		AB9330BD274CDD4F00F8C818 /* AttractionFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9330BC274CDD4F00F8C818 /* AttractionFinderViewController.swift */; };
@@ -47,10 +47,10 @@
 		AB933094274CD1A000F8C818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB933096274CD1A000F8C818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB93309B274CD1A000F8C818 /* AttractionAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttractionAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB93309F274CD1A000F8C818 /* LocationExTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationExTests.swift; sourceTree = "<group>"; };
+		AB93309F274CD1A000F8C818 /* AttractionAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionAppTests.swift; sourceTree = "<group>"; };
 		AB9330A1274CD1A000F8C818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB9330A6274CD1A000F8C818 /* AttractionAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttractionAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB9330AA274CD1A000F8C818 /* LocationExUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationExUITests.swift; sourceTree = "<group>"; };
+		AB9330AA274CD1A000F8C818 /* AttractionAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionAppUITests.swift; sourceTree = "<group>"; };
 		AB9330AC274CD1A000F8C818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB9330B8274CD49E00F8C818 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
 		AB9330BA274CDAEC00F8C818 /* MySchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySchoolViewController.swift; sourceTree = "<group>"; };
@@ -86,8 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				AB933087274CD19F00F8C818 /* AttractionApp */,
-				AB93309E274CD1A000F8C818 /* LocationExTests */,
-				AB9330A9274CD1A000F8C818 /* LocationExUITests */,
+				AB93309E274CD1A000F8C818 /* AttractionAppTests */,
+				AB9330A9274CD1A000F8C818 /* AttractionAppUITests */,
 				AB933086274CD19F00F8C818 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,22 +119,22 @@
 			path = AttractionApp;
 			sourceTree = "<group>";
 		};
-		AB93309E274CD1A000F8C818 /* LocationExTests */ = {
+		AB93309E274CD1A000F8C818 /* AttractionAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				AB93309F274CD1A000F8C818 /* LocationExTests.swift */,
+				AB93309F274CD1A000F8C818 /* AttractionAppTests.swift */,
 				AB9330A1274CD1A000F8C818 /* Info.plist */,
 			);
-			path = LocationExTests;
+			path = AttractionAppTests;
 			sourceTree = "<group>";
 		};
-		AB9330A9274CD1A000F8C818 /* LocationExUITests */ = {
+		AB9330A9274CD1A000F8C818 /* AttractionAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				AB9330AA274CD1A000F8C818 /* LocationExUITests.swift */,
+				AB9330AA274CD1A000F8C818 /* AttractionAppUITests.swift */,
 				AB9330AC274CD1A000F8C818 /* Info.plist */,
 			);
-			path = LocationExUITests;
+			path = AttractionAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB9330A0274CD1A000F8C818 /* LocationExTests.swift in Sources */,
+				AB9330A0274CD1A000F8C818 /* AttractionAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB9330AB274CD1A000F8C818 /* LocationExUITests.swift in Sources */,
+				AB9330AB274CD1A000F8C818 /* AttractionAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +455,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.AttractionEx;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.AttractionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -474,7 +474,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.AttractionEx;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.AttractionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -487,14 +487,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LocationExTests/Info.plist;
+				INFOPLIST_FILE = AttractionAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.LocationExTests;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.AttractionAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -508,14 +508,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LocationExTests/Info.plist;
+				INFOPLIST_FILE = AttractionAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.LocationExTests;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.AttractionAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -528,17 +528,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LocationExUITests/Info.plist;
+				INFOPLIST_FILE = AttractionAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.LocationExUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.AttractionAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LocationEx;
+				TEST_TARGET_NAME = AttractionApp;
 			};
 			name = Debug;
 		};
@@ -547,17 +547,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LocationExUITests/Info.plist;
+				INFOPLIST_FILE = AttractionAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.self.LocationExUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.self.AttractionAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LocationEx;
+				TEST_TARGET_NAME = AttractionApp;
 			};
 			name = Release;
 		};
