@@ -70,6 +70,26 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         skyObvAnnotation.title = "The Sky100 Observation Deck";
         self.annotations.append(skyObvAnnotation);
         
+        let manMoAnnotation = MKPointAnnotation();
+        manMoAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.28401, longitude: 114.150291);
+        manMoAnnotation.title = "Man Mo Temple";
+        self.annotations.append(manMoAnnotation);
+        
+        let starFerryAnnotation = MKPointAnnotation();
+        manMoAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.287273, longitude: 114.165904);
+        starFerryAnnotation.title = "Star Ferry";
+        self.annotations.append(starFerryAnnotation);
+        
+        let lkfAnnotation = MKPointAnnotation();
+        lkfAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.28107, longitude: 114.155478);
+        lkfAnnotation.title = "Lan Kwai Fong";
+        self.annotations.append(lkfAnnotation);
+        
+        let polinAnnotation = MKPointAnnotation();
+        polinAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.255476, longitude: 113.90819);
+        polinAnnotation.title = "Po Lin Monastery";
+        self.annotations.append(polinAnnotation);
+        
         let peakAnnotation = MKPointAnnotation();
         peakAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.284389, longitude: 114.188950);
         peakAnnotation.title = "The Vitoria Peak";
@@ -192,6 +212,10 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         let taiOCoord = CLLocationCoordinate2D(latitude: 22.2542, longitude: 113.8622);
         let wCoord = CLLocationCoordinate2D(latitude: 22.342572, longitude: 114.193649);
         let sCoord = CLLocationCoordinate2D(latitude: 22.303381, longitude: 114.160231);
+        let mCoord = CLLocationCoordinate2D(latitude: 22.28401, longitude: 114.150291);
+        let starCoord = CLLocationCoordinate2D(latitude: 22.287273, longitude: 114.165904);
+        let lCoord = CLLocationCoordinate2D(latitude: 22.28107, longitude: 114.155478);
+        let polinCoord = CLLocationCoordinate2D(latitude: 22.255476, longitude: 113.90819);
         let pCoord = CLLocationCoordinate2D(latitude: 22.284389, longitude: 114.188950);
         monitorLocation(centerPoint: oCoord, identifier: "FencePoint")
         monitorLocation(centerPoint: dCoord, identifier: "FencePoint")
@@ -200,6 +224,10 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         monitorLocation(centerPoint: taiOCoord, identifier: "FencePoint")
         monitorLocation(centerPoint: wCoord, identifier: "FencePoint")
         monitorLocation(centerPoint: sCoord, identifier: "FencePoint")
+        monitorLocation(centerPoint: mCoord, identifier: "FencePoint")
+        monitorLocation(centerPoint: starCoord, identifier: "FencePoint")
+        monitorLocation(centerPoint: lCoord, identifier: "FencePoint")
+        monitorLocation(centerPoint: polinCoord, identifier: "FencePoint")
         monitorLocation(centerPoint: pCoord, identifier: "FencePoint")
 
     }
