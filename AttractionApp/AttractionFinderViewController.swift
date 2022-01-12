@@ -149,7 +149,7 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         
         //this alerts the user
         let phoneAlert = UIAlertController.init(title: "You have now entered the place", message: "entering", preferredStyle: .alert)
-        phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
+        phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.cancel, handler: nil))
         self.present(phoneAlert, animated: true, completion: nil)
         showNoti(title: "You are entering the actraction", message: "Hope you have a good time")
         saveEnterData(number: userEnters)
@@ -161,7 +161,7 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         
         //this alerts the user
         let phoneAlert = UIAlertController.init(title: "You have now exited the place", message: "leaving", preferredStyle: .alert)
-        phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
+        phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.cancel, handler: nil))
         self.present(phoneAlert, animated: true, completion: nil)
         showNoti(title: "You are leaving the actraction", message: "See you again")
         saveExitData(number: userExits)
