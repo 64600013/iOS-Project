@@ -9,9 +9,6 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
     @IBOutlet weak var mapView : MKMapView?
     
     var locationManager : CLLocationManager?
-//    @IBOutlet weak var latField : UITextField?
-//    @IBOutlet weak var lngField : UITextField?
-//    @IBOutlet weak var accuracyField : UITextField?
     var annotations = [MKPointAnnotation]();
     var userEnters : Int = 0
     var userExits : Int = 0
@@ -76,7 +73,7 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         self.annotations.append(manMoAnnotation);
         
         let starFerryAnnotation = MKPointAnnotation();
-        manMoAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.287273, longitude: 114.165904);
+        starFerryAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.287273, longitude: 114.165904);
         starFerryAnnotation.title = "Star Ferry";
         self.annotations.append(starFerryAnnotation);
         
@@ -95,7 +92,10 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         peakAnnotation.title = "The Vitoria Peak";
         self.annotations.append(peakAnnotation);
         
+        //this adds the pins to annotations
         self.mapView?.addAnnotations(self.annotations);
+        
+        //this calls functions to create the geo fence
         makePoint()
         // Do any additional setup after loading the view.
     }
@@ -115,9 +115,11 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
     
     //This updates the circles coords
     func renderCircle(_ location: CLLocation){
+        //this sets the circle data for the geo fence
         let coord = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let circleSpan = MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
         let region = MKCoordinateRegion(center: coord, span: circleSpan)
+        
         mapView?.setRegion(region, animated: true)
         mapView?.showsUserLocation = true
     }
@@ -143,21 +145,25 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
     
     //This show the message when user enter
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        userEnters += 1
+        
+        //this alerts the user
         let phoneAlert = UIAlertController.init(title: "You have now entered the place", message: "entering", preferredStyle: .alert)
         phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
         self.present(phoneAlert, animated: true, completion: nil)
         showNoti(title: "You are entering the actraction", message: "Hope you have a good time")
-        userEnters += 1
         saveEnterData(number: userEnters)
     }
     
     //This show the message when user leave
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        let phoneAlert = UIAlertController.init(title: "You have now exited the place", message: "exiting", preferredStyle: .alert)
+        userExits += 1
+        
+        //this alerts the user
+        let phoneAlert = UIAlertController.init(title: "You have now exited the place", message: "leaving", preferredStyle: .alert)
         phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.default, handler: nil))
         self.present(phoneAlert, animated: true, completion: nil)
         showNoti(title: "You are leaving the actraction", message: "See you again")
-        userExits += 1
         saveExitData(number: userExits)
     }
     
@@ -178,6 +184,7 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         }
     }
     
+    //This save the entry data to firebase
     func saveEnterData(number: Int){
         let ref = database.document("userData/Enter")
         let convert = String(number)
@@ -185,6 +192,7 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
     
     }
     
+    //this save the exit data to firebase
     func saveExitData(number: Int){
         let ref = database.document("userData/Exit")
         let convert = String(number)
@@ -223,8 +231,8 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         monitorLocation(centerPoint: tCoord, identifier: "FencePoint")
         monitorLocation(centerPoint: taiOCoord, identifier: "FencePoint")
         monitorLocation(centerPoint: wCoord, identifier: "FencePoint")
-        monitorLocation(centerPoint: sCoord, identifier: "FencePoint")
         monitorLocation(centerPoint: mCoord, identifier: "FencePoint")
+        monitorLocation(centerPoint: sCoord, identifier: "FencePoint")
         monitorLocation(centerPoint: starCoord, identifier: "FencePoint")
         monitorLocation(centerPoint: lCoord, identifier: "FencePoint")
         monitorLocation(centerPoint: polinCoord, identifier: "FencePoint")
