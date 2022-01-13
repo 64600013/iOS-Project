@@ -135,11 +135,6 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
     func locationManager(_ manager: CLLocationManager,
                          didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
-            
-//            self.latField?.text = "\(location.coordinate.latitude)";
-//            self.lngField?.text = "\(location.coordinate.longitude)";
-//            self.accuracyField?.text = "\(location.horizontalAccuracy)";
-//
 //            let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01);
 //            let coord = location.coordinate;
 //            let region = MKCoordinateRegion(center: coord, span: span)
