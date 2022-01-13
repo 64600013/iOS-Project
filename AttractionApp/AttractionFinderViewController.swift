@@ -12,6 +12,7 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
     var annotations = [MKPointAnnotation]();
     var userEnters : Int = 0
     var userExits : Int = 0
+    var saveMsg : String = ""
     
     let database = Firestore.firestore()
 
@@ -116,7 +117,7 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
     }
     
     //This updates the circles coords
-    func renderCircle(_ location: CLLocation){
+    func printCircle(_ location: CLLocation){
         //this sets the circle data for the geo fence
         let coord = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let circleSpan = MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
@@ -141,7 +142,7 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
 //            self.mapView?.setRegion(region, animated: false);
             
             locationManager?.startUpdatingLocation()
-            renderCircle(location)
+            printCircle(location)
         }
     }
     
@@ -190,7 +191,8 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
     func saveEnterData(number: Int){
         let ref = database.document("userData/Enter")
         let convert = String(number)
-        ref.setData(["Enter Info": "The User have entered " + convert + " times"])
+        saveMsg = "The User have entered " + convert + " times"
+        ref.setData(["Enter Info": saveMsg])
     
     }
     
@@ -198,7 +200,8 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
     func saveExitData(number: Int){
         let ref = database.document("userData/Exit")
         let convert = String(number)
-        ref.setData(["Exit Info": "The User have exited " + convert + " times"])
+        saveMsg = "The User have exited " + convert + " times"
+        ref.setData(["Exit Info": saveMsg])
     
     }
     
