@@ -97,6 +97,8 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         
         //this calls functions to create the geo fence
         makePoint()
+        
+        
         // Do any additional setup after loading the view.
     }
     //for in-app authorization event

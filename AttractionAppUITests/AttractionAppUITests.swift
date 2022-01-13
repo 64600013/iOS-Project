@@ -17,13 +17,21 @@ class AttractionAppUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func appRuns() throws {
         let app = XCUIApplication()
         app.launch()
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func mapRuns(){
+        let app = XCUIApplication()
+        app/*@START_MENU_TOKEN@*/.staticTexts["Attractions Finder"]/*[[".buttons[\"Attractions Finder\"].staticTexts[\"Attractions Finder\"]",".staticTexts[\"Attractions Finder\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["Attraction Finder"].buttons["Attraction App"].tap()
+        
+    }
+    
+    func addressRuns(){
+        
     }
 
     func testLaunchPerformance() throws {
