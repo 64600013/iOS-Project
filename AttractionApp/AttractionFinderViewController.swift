@@ -19,7 +19,9 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Attraction Finder"
+        //init notification
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {(granted, error) in}
+        //init gps
         if CLLocationManager.locationServicesEnabled() {
             self.locationManager = CLLocationManager();
             self.locationManager?.delegate = self;
@@ -33,6 +35,7 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         }
         
         //This is all the attractions pins
+        //=======================================
         let oPAnnotation = MKPointAnnotation();
         oPAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.246660, longitude: 114.175720);
         oPAnnotation.title = "Ocean Park";
@@ -92,6 +95,7 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         peakAnnotation.coordinate = CLLocationCoordinate2D(latitude: 22.284389, longitude: 114.188950);
         peakAnnotation.title = "The Vitoria Peak";
         self.annotations.append(peakAnnotation);
+        //=============================================
         
         //this adds the pins to annotations
         self.mapView?.addAnnotations(self.annotations);
@@ -154,6 +158,8 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         let phoneAlert = UIAlertController.init(title: "You have now entered the place", message: "entering", preferredStyle: .alert)
         phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.cancel, handler: nil))
         self.present(phoneAlert, animated: true, completion: nil)
+        
+        //backgound notification call
         showNoti(title: "You are entering the actraction", message: "Hope you have a good time")
         saveEnterData(number: userEnters)
     }
@@ -166,6 +172,8 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         let phoneAlert = UIAlertController.init(title: "You have now exited the place", message: "leaving", preferredStyle: .alert)
         phoneAlert.addAction(UIAlertAction(title: "Got it", style: UIAlertAction.Style.cancel, handler: nil))
         self.present(phoneAlert, animated: true, completion: nil)
+        
+        //backgound notification call
         showNoti(title: "You are leaving the actraction", message: "See you again")
         saveExitData(number: userExits)
     }

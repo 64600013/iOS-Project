@@ -37,11 +37,12 @@ class AttractionAppExTests: XCTestCase {
         
     }
     
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    //this test the geo fences
+    func testCircle() throws{
+        let data = AttractionFinderViewController()
+        let testCoord = CLLocationCoordinate2D(latitude: 22.384389, longitude: 114.288950);
+        data.monitorLocation(centerPoint: testCoord, identifier: "FencePoint")
+        
     }
 
 }

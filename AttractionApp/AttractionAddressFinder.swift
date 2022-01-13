@@ -28,9 +28,13 @@ class AttractionAddressFinder: UIViewController,UITableViewDataSource {
     
     //this display all the text and pics inside the cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //init cells
         let displayCell = tableView.dequeueReusableCell(withIdentifier: "displayCell", for: indexPath)
+        //main text
         displayCell.textLabel?.text = attractionArray[indexPath.section][indexPath.row]
+        //image
         displayCell.imageView?.image = picsArray[indexPath.section][indexPath.row]
+        //subtitles
         displayCell.detailTextLabel?.text = details[indexPath.section][indexPath.row]
         return displayCell
     }
