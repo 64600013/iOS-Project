@@ -4,7 +4,7 @@ import CoreLocation
 import FirebaseFirestore
 
 
-class AttractionFinderViewController: UIViewController, CLLocationManagerDelegate {
+class AttractionFinderViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapView : MKMapView?
     
@@ -120,15 +120,16 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         self.locationManager?.startUpdatingLocation();
     }
     
-    //This updates the circles coords
-    func printCircle(_ location: CLLocation){
-        //this sets the circle data for the geo fence
-        let coord = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let circleSpan = MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
-        let region = MKCoordinateRegion(center: coord, span: circleSpan)
-        
-        mapView?.setRegion(region, animated: true)
-        mapView?.showsUserLocation = true
+    //This is used to configure the circle display settings of the geo fencing
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        guard let circleOverlay = overlay as? MKCircle else {
+            return MKOverlayRenderer()
+        }
+        let circleRender = MKCircleRenderer(circle: circleOverlay)
+        circleRender.strokeColor = .red
+        circleRender.fillColor = .red
+        circleRender.alpha = 0.5
+        return circleRender
     }
     
     //This updates the coords
@@ -141,7 +142,14 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
 //            self.mapView?.setRegion(region, animated: false);
             
             locationManager?.startUpdatingLocation()
-            printCircle(location)
+            
+            //This updates the circles coords
+            //this sets the circle data for the geo fence
+            let coord = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            let circleSpan = MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
+            let region = MKCoordinateRegion(center: coord, span: circleSpan)
+            mapView?.setRegion(region, animated: true)
+            mapView?.showsUserLocation = true
         }
     }
     
@@ -247,18 +255,5 @@ class AttractionFinderViewController: UIViewController, CLLocationManagerDelegat
         monitorLocation(centerPoint: pCoord, identifier: "FencePoint")
 
     }
-}
-
-//This is used to configure the circle display settings of the geo fencing
-extension AttractionFinderViewController : MKMapViewDelegate{
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        guard let circleOverlay = overlay as? MKCircle else {
-            return MKOverlayRenderer()
-        }
-        let circleRender = MKCircleRenderer(circle: circleOverlay)
-        circleRender.strokeColor = .red
-        circleRender.fillColor = .red
-        circleRender.alpha = 0.5
-        return circleRender
-    }
+    
 }
